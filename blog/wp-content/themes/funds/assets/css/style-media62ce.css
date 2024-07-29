@@ -1,0 +1,263 @@
+/*if we add subscription item we should add a more space to header menu*/
+/*@media (min-width: 1560px) {
+    .menu-main-menu-container ul#top-menu{
+        max-width: 1548px;
+        margin: 0px auto;
+        padding-right: 11px;
+    }
+}*/
+
+@media (min-width: 1024px) and (max-width: 1375px) {
+    .elementor > .elementor-section-wrap > .elementor-section.elementor-section-boxed > .elementor-container,
+    .elementor > .elementor-inner > .elementor-section-wrap > .elementor-section.elementor-section-boxed > .elementor-container,
+    .elementor > .elementor-inner > .elementor-section-wrap > .elementor-section.elementor-section-full_width > .elementor-container{
+        max-width: 100%;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
+
+    .about-us-dedicated-box .elementor-widget-wrap {
+        padding-left: 3% !important;
+        padding-right: 3% !important;
+    }
+
+    .contact-us-phone-email-row > .elementor-container > .elementor-row {
+        flex-wrap: wrap !important;
+    }
+
+    .contact-us-phone-email-row .contact-via-phone,
+    .contact-us-phone-email-row .contact-via-email {
+        width: 100% !important;
+    }
+
+    .contact-us-left {
+        width: auto !important;
+    }
+
+    .contact-us-right {
+        width: auto !important;
+        min-width: 410px !important;
+    }
+
+    .contact-us-right > .elementor-column-wrap > .elementor-widget-wrap > .elementor-section > .elementor-container {
+        padding-right: 0px;
+    }
+
+    .left-img-column-with-text {
+        min-width: 130px !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1375px) {
+    .about-us-dedicated-box .elementor-widget-wrap {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .h1-box .elementor-widget-wrap {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .profile-box {
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .profile-box-inner {
+        width: 100%;
+        margin: 0px 0px 20px 0px;
+    }
+
+    .site-footer .widget-area {
+        flex-wrap: wrap;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .site-footer .widget-column {
+        width: 100%;
+        padding-top: 1em;
+    }
+
+    .footer-widget-3 .wp-container-2 {
+        justify-content: center;
+    }
+
+    .footer-widget-3 ul {
+        justify-content: center;
+    }
+
+    .copy {
+        text-align: center;
+    }
+
+    .your-subscription-inner {
+        flex-wrap: wrap;
+    }
+
+    .your-subscription-inner-left,
+    .your-subscription-inner-right {
+        max-width: 100%;
+    }
+
+    .form-buttons-block {
+        margin-top: -15px;
+    }
+
+    .form-buttons-block button {
+        margin-top: 15px;
+    }
+
+    .payment-form input.card-element-input {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-header-max-width {
+        max-width: 300px;
+    }
+
+    .tutor-dashboard-content .tutor-alert .tutor-alert-text {
+        align-items: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .tutor-screen-frontend-dashboard {
+        padding-bottom: 0px !important;
+    }
+
+    .logged-in.tutor-screen-frontend-dashboard {
+        padding-bottom: 94px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .tutor-dashboard .tutor-dashboard-content #tutor_profile_cover_photo_editor #tutor_cover_area .tutor_cover_uploader {
+        right: 10px;
+        bottom: 10px;
+        font-size: 13px;
+    }
+
+    .tutor-dashboard .tutor-dashboard-content #tutor_profile_cover_photo_editor #tutor_cover_area .tutor_cover_deleter {
+        top: 10px;
+        right: 10px;
+    }
+
+    .tutor-dashboard .tutor-dashboard-content #tutor_profile_cover_photo_editor #tutor_profile_area {
+        left: 10px;
+    }
+
+    .toprightmenu ul li a {
+        min-width: 95px;
+    }
+
+    .tutor-dashboard-content .tutor-alert .tutor-alert-text {
+        justify-content: center;
+    }
+
+    .tutor-dashboard-content .tutor-alert .alert-btn-group {
+        justify-self: center;
+        align-items: center;
+    }
+
+    .tutor-dashboard-content .tutor-alert {
+        grid-gap: 10px;
+    }
+
+    .tutor-wrap-parent.tutor-dashboard.tutor-frontend-dashboard.tutor-pb-80 {
+        padding-bottom: 0px;
+    }
+
+    .tutor-wrap-parent.tutor-dashboard.tutor-frontend-dashboard.tutor-pb-80 .tutor-dashboard-content {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile,
+    body.page-template-default.tutor-lms.tutor-screen-frontend-dashboard #content.site-content,
+    body.page-template-page-tutor-php #content.site-content,
+    body.page-template-default.woocommerce-page #content.site-content,
+    body.post-type-archive-courses #content.site-content,
+    body.lesson-template-default.single #content.site-content,
+    body.tutor_quiz-template-default.single #content.site-content,
+    #main > .error-404.not-found,
+    body.courses-template-default.single-courses .tutor-course-details-page.tutor-container {
+        padding-top: 25px !important;
+    }
+
+    .profile-header-bg {
+        height: auto;
+        min-height: 250px;
+    }
+
+    .profile-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-header-bg .profile-header-inner {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin: 15px 0px;
+    }
+
+    .profile-header-avatar {
+        margin-right: 0px !important;
+    }
+
+    .profile-header-name {
+        text-align: center;
+        width: 100%;
+    }
+
+    .profile-header-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .profile-header-max-width {
+        max-width: 100%;
+    }
+
+    .see-public-profile {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .profile-box-right,
+    .profile-text {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .profile-field-name,
+    .profile-field-value {
+        display: block;
+        width: 100%;
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 400px) {
+    .tutor-dashboard .tutor-dashboard-content #tutor_profile_cover_photo_editor #tutor_cover_area .tutor_cover_uploader > span {
+        display: none;
+    }
+    .tutor-dashboard .tutor-dashboard-content #tutor_profile_cover_photo_editor #tutor_cover_area .tutor_cover_uploader .tutor-icon-camera {
+        margin-right: 0px;
+    }
+}

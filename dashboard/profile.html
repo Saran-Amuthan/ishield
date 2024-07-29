@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+
+	<title>Ishield Dashboard</title>
+	<style>
+		.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile {
+    display: flex;
+}
+
+.profile-picture {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-picture img {
+    width: 200px;
+    height: 200px;
+    border-radius: 30%;
+    border: 2px solid #ccc;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 2;
+    padding: 20px;
+}
+
+.profile-info h2 {
+    margin-top: 0;
+}
+
+.profile-info p {
+    margin-bottom: 10px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-back {
+    margin-right: 10px;
+}
+
+.btn-update {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-update:hover {
+    background-color: #218838;
+}
+	</style>
+
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="index.html" class="brand">
+			<img src="../images/logo-ishield.png" alt="Ishield">
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="index.html">
+					<i class='bx bxs-dashboard'></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="profile.html">
+					<i class='bx bx-user'></i>
+					<span class="text">My Profile</span>
+				</a>
+			</li>
+			<li>
+				<a href="KYC.html">
+					<i class='bx bxs-id-card'></i>
+					<span class="text">KYC</span>
+				</a>
+			</li>
+			<li>
+				<a href="wallet.html">
+					<i class='bx bx-wallet'></i>
+					<span class="text">Wallet</span>
+				</a>
+			</li>
+			<li>
+				<a href="Analytics.html">
+					<i class='bx bxs-doughnut-chart'></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+			<li>
+				<a href="team.html">
+					<i class='bx bxs-group'></i>
+					<span class="text">Team</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog'></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="../Sign_in.html" class="logout">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu'></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell'></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="img/people.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="index.html">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right'></i></li>
+						<li>
+							<a class="active" href="profile.html">PROFILE</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div class="container">
+				<div class="profile">
+					<div class="profile-picture">
+						<img src="../images/team-member.webp" alt="Profile Picture" id="profileImage">
+						<form action="updateprofile.php" method="post" enctype="multipart/form-data">
+							<input type="file" name="profilePicture" id="profilePicture">
+							<input type="submit" value="Upload Picture" name="submit">
+						</form>
+					</div>
+					<div class="profile-info">
+						<h2>Profile Information</h2>
+						<p><strong>Employee Name:</strong>
+							<?php echo $username; ?>
+						</p>
+						<p><strong>Employee ID:</strong>
+							<?php echo $empID; ?>
+						</p>
+						<p><strong>Employee Role:</strong>
+							<?php echo $empRole; ?>
+						</p>
+						<p><strong>Email:</strong>
+							<?php echo $email; ?>
+						</p>
+						<p><strong>Phone Number:</strong>
+							<?php echo $phoneNumber; ?>
+						</p>
+						<div class="buttons">
+							<a href="dashboard.html" class="btn btn-back">Back to Dashboard</a>
+							<a href="update_profile.php" class="btn btn-update">Update Changes</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+
+
+	<script src="script.js"></script>
+</body>
+
+</html>

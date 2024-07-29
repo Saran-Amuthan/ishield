@@ -1,0 +1,522 @@
+.site-content .tutor-btn-outline-primary:hover,
+.site-content .tutor-btn-outline-primary:focus,
+.site-content .tutor-btn-outline-primary:active {
+    color: #ffffff;
+}
+
+body.page-template-default.tutor-lms.tutor-screen-frontend-dashboard #content.site-content,
+body.page-template-page-tutor-php #content.site-content,
+body.page-template-default.woocommerce-page #content.site-content,
+body.post-type-archive-courses #content.site-content,
+body.lesson-template-default.single #content.site-content,
+body.tutor_quiz-template-default.single #content.site-content {
+    padding: 60px 0px 60px 0px !important;
+}
+
+body.lesson-template-default.single #content.site-content,
+body.tutor_quiz-template-default.single #content.site-content {
+    padding: 45px 0px 0px 0px !important;
+}
+
+body.courses-template-default.single-courses .tutor-course-details-page.tutor-container {
+    padding-top: 40px;
+}
+
+
+body.courses-template-default.single .tutor-course-details-page.tutor-container {
+    padding-bottom: 40px;
+}
+
+/*.courses-template-default.single.single-courses .site-content-contain {*/
+/*    padding-top: 50px;*/
+/*}*/
+
+.tutor-form-select,
+.tutor-js-form-select {
+    line-height: 32px;
+    border-radius: 4px;
+    border-color: #dcdfe5;
+    color: #575757;
+}
+
+body .woocommerce form .form-row .select2 .select2-selection--single {
+    border-radius: 4px !important;
+    border-color: #dcdfe5 !important;
+    height: 50px !important;
+}
+
+body .woocommerce form .form-row .select2 .select2-selection--single .select2-selection__rendered {
+    line-height: 50px !important;
+    padding-left: 15px !important;
+    color: #575757 !important;
+}
+
+body .woocommerce form .form-row .select2 .select2-selection--single .select2-selection__arrow {
+    height: 100% !important;
+}
+
+#tutor-registration-from .tutor-alert-warning {
+    padding-left: 19px;
+}
+
+input.tutor-form-control[type='text'],
+input.tutor-form-control[type='url'],
+input.tutor-form-control[type='email'],
+input.tutor-form-control[type='password'],
+input.tutor-form-control[type='tel'],
+.tutor-form-group input[type='url'],
+.tutor-form-group input[type='email'],
+.tutor-form-group input[type='tel'],
+.tutor-form-group input[type='text'],
+body .woocommerce form .form-row input.input-text,
+body .woocommerce form .form-row textarea{
+    width: 100%;
+    display: block;
+    border: 1px solid #dcdfe5;
+    box-shadow: none;
+    border-radius: 4px;
+    background: #ffffff;
+    line-height: 48px;
+    padding: 0;
+    text-indent: 15px;
+    transition: 300ms;
+    font-size: 16px;
+    color: #575757;
+}
+
+body .woocommerce form .form-row textarea {
+    line-height: 1.2em;
+    height: auto;
+    min-height: 90px;
+    padding: 10px 15px;
+    text-indent: 0px;
+}
+
+.tutor-form-group input[type='url'],
+.tutor-form-group input[type='email'],
+.tutor-form-group input[type='tel'],
+.tutor-form-group input[type='text'] {
+    margin-bottom: 20px;
+}
+
+.asas.tutor-alert {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.see-public-profile {
+    text-align: right;
+}
+
+.see-public-profile a,
+.button-type-1,
+.button-type-2 {
+    display: inline-block;
+    width: auto;
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 19px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #2F3E94;
+    color: #2F3E94;
+}
+
+.button-type-2 {
+    background-color: #2F3E94;
+    color: #ffffff;
+}
+
+.see-public-profile a:hover,
+.button-type-1:hover,
+.button-type-2:hover {
+    color: #ffffff !important;
+    background-color: #2F3E94;
+}
+
+.button-type-2:hover {
+    color: #2F3E94 !important;
+    background-color: #ffffff;
+}
+
+.tutor-course-filter-container {
+    margin-bottom: 30px;
+}
+
+body.courses-template-default.single .tutor-course-details-page.tutor-container .tutor-accordion-item-header {
+    padding-top: 16px;
+}
+
+.courses-template-default.single .tutor-course-details-page .tutor-course-details-tab .tutor-is-sticky {
+    z-index: 2;
+}
+
+.tutor-d-none {
+    display: none;
+}
+
+.tutor-d-block {
+    display: block;
+}
+.grey-text {
+    color: #777777;
+}
+
+.text-normal {
+    font-weight: normal;
+}
+
+.tutor-label-with-checkbox {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.tutor-subscription-box {
+}
+
+.tutor-subscription-box-card-item-product {
+
+}
+
+.tutor-subscription-box-card-item-product .tutor-subscription-box-inner-name,
+.tutor-subscription-box-card-item-product .tutor-subscription-box-inner-price,
+.tutor-subscription-box-card-item-product .tutor-subscription-box-inner-text {
+    text-align: left;
+}
+
+.tutor-subscription-box-card-item-product .tutor-subscription-box-inner-name {
+    font-size: 20px;
+    padding-top: 0px;
+}
+
+.tutor-subscription-box-card-item-product .tutor-subscription-box-inner-text ul {
+    display: block;
+}
+
+.tutor-subscription-box-card {
+    margin-bottom: 20px;
+}
+
+.tutor-subscription-box-card-wrap {
+    min-height: 100%;
+}
+
+.tutor-subscription-box-inner {
+    position: relative;
+    border: 1px solid #2F3E94;
+    border-radius: 12px;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    padding: 22px;
+    overflow: hidden;
+}
+
+.tutor-subscription-box-current-plan {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-left: -22px;
+    margin-top: -22px;
+    box-sizing: content-box;
+    background-color: #2F3E94;
+    padding: 8px 22px 18px 22px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.tutor-subscription-box-current-plan:after {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: block;
+    content: ' ';
+    width: 100%;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.tutor-subscription-box-inner-name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #333333;
+    padding-top: 18px;
+}
+
+.tutor-subscription-box-inner.active .tutor-subscription-box-inner-name {
+    padding-top: 0px;
+}
+
+.tutor-subscription-box-inner-price {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #333333;
+    padding: 17px 0px 15px 0px;
+}
+
+.tutor-subscription-box-inner-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #333333;
+}
+
+.tutor-subscription-box-inner-text p {
+    margin-bottom: 5px;
+}
+
+.tutor-subscription-box-inner-text ul {
+    display: inline-block;
+    margin: 10px auto 0px auto;
+    text-align: left;
+    list-style: none;
+    width: auto;
+}
+
+.tutor-subscription-box-inner-text ul li {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    padding: 0px 0px 0px 20px;
+    margin: 2px 0px;
+}
+
+.tutor-subscription-box-inner-text ul li:before {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: auto;
+    height: auto;
+    content: '-';
+    color: inherit;
+}
+
+.tutor-subscription-box-inner-btn {
+    text-align: center;
+    padding-top: 4px;
+}
+
+.tutor-subscription-box-inner-btn .button-type-1,
+.tutor-subscription-box-inner-btn .button-type-2 {
+    width: 100%;
+}
+
+#card-element,
+.payment-form input.card-element-input {
+    border: 1px solid #dcdfe5;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    padding: 11px 17px;
+    box-sizing: border-box;
+}
+
+.payment-form input.card-element-input {
+    color: #2F3E94;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    text-shadow: 0px 0px 1px rgba(47, 62, 148, 0.1);
+}
+
+.payment-form input.card-element-input::placeholder {
+    color: #333333;
+    opacity: 1;
+    text-shadow: 0px 0px 1px rgba(51, 51, 51, 0.1);
+}
+
+.subscription-box-warning-message {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    color: #2F3E94;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #2F3E94;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#card-element-errors,
+#subscription-coupon-element-errors,
+.subscription-error-message,
+.subscription-warning-message {
+    display: none;
+    color: #ED1B23;
+    font-size: 12px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.subscription-error-message {
+    display: block;
+}
+
+.subscription-warning-message {
+    display: block;
+    color: #2F3E94;
+}
+
+.subscription-error-message.subscription-error-message-hide {
+    display: none;
+}
+
+.subscription-warning-message a,
+.subscription-error-message a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.subscription-warning-message a:hover,
+.subscription-error-message a:hover {
+    text-decoration: none;
+}
+
+#card-element-errors.visible,
+#subscription-coupon-element-errors.visible,
+.subscription-error-message.subscription-error-message-hide.visible {
+    display: block;
+}
+
+button.button-stripe-style.disabled,
+button.button-stripe-style.disabled:hover {
+    cursor: default;
+    border-color: #767676 !important;
+    background-color: #767676 !important;
+    color: #ffffff !important;
+}
+
+button.button-stripe-style {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    cursor: pointer;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+button.button-stripe-style:hover {
+    background-color: #ffffff !important;
+    color: #2F3E94 !important;
+}
+
+.your-subscription-inner {
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 0px;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.your-subscription-box .your-subscription-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.your-subscription-inner-left {
+    margin-right: 5px;
+    font-weight: 600;
+    max-width: 50%;
+}
+
+.your-subscription-inner-right {
+    margin-right: 5px;
+    font-weight: 600;
+    max-width: 50%;
+}
+
+.your-subscription-box .your-subscription-inner-left,
+.your-subscription-box .your-subscription-inner-right {
+    max-width: 100%;
+}
+
+.your-subscription-card-number,
+.your-subscription-coupon {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 0px 3px 0px;
+}
+
+.your-subscription-coupon {
+    padding-top: 0px;
+}
+
+.your-subscription-card-number .card-icon,
+.your-subscription-coupon .coupon-icon {
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.your-subscription-coupon .coupon-text {
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.your-subscription-card-number .color-blue,
+.your-subscription-coupon .color-blue{
+    color: #2F3E94;
+}
+
+.your-subscription-card-number .card-number,
+.your-subscription-coupon .coupon-number {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.your-subscription-card-number .edit-card,
+.your-subscription-card-number .edit-card:hover,
+.your-subscription-coupon .edit-coupon,
+.your-subscription-coupon .edit-coupon:hover {
+    background: none;
+    padding: 0px;
+    min-width: auto;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    color: inherit;
+}
+
+.your-subscription-card-number .edit-card:hover,
+.your-subscription-coupon .edit-coupon:hover {
+    color: #2F3E94;
+}
+
+#payment-method-form {
+    display: none;
+}
+
+.form-buttons-block button {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.tutor-free-subscription-text {
+    line-height: 1.2em !important;
+}
+
+.form-subscription-edit-view-coupon-edit-options {
+    display: none;
+}
+
+.your-coupon-label-text {
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    padding-top: 3px;
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+
+	<title>Ishield Dashboard</title>
+	<style>
+
+.wallet-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.balance {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.balance h2 {
+    color: #555;
+}
+
+.balance p {
+    font-size: 24px;
+    color: #333;
+}
+
+.transaction-history {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.transaction-history h2 {
+    color: #555;
+}
+
+.transaction-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.transaction-history li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+}
+
+.transaction-history li .transaction-date {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.transaction-history li .transaction-description {
+    color: #333;
+}
+/* Add this new style for the withdrawal button */
+.withdrawal {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.withdraw-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.withdraw-button:hover {
+    background-color: #0056b3;
+}
+
+
+	</style>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="index.html" class="brand">
+			<img src="../images/logo-ishield.png" alt="Ishield">
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="index.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="profile.html">
+					<i class='bx bx-user'></i>
+					<span class="text">My Profile</span>
+				</a>
+			</li>
+			<li>
+				<a href="KYC.html">
+					<i class='bx bxs-id-card'></i>
+					<span class="text">KYC</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="wallet.html">
+					<i class='bx bx-wallet'></i>
+					<span class="text">Wallet</span>
+				</a>
+			</li>
+			<li>
+				<a href="Analytics.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+			<li>
+				<a href="team.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Team</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="../Sign_in.html" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu'></i>
+			<a href="#" class="nav-link">Categories</a>
+			<div class="nav-right">
+				<input type="checkbox" id="switch-mode" hidden>
+				<label for="switch-mode" class="switch-mode"></label>
+				<a href="#" class="profile">
+					<img src="img/people.png">
+				</a>
+			</div>
+		</nav>
+		
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Wa</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Download </span>
+				</a>
+			</div>
+
+			<div class="wallet-container">
+				<h1>My Wallet</h1>
+				<div class="balance">
+					<h2>Balance</h2>
+					<p>$500.00</p> <!-- Replace with dynamic value if applicable -->
+				</div>
+				<div class="transaction-history">
+					<h2>Transaction History</h2>
+					<ul>
+						<li>
+							<span class="transaction-date">2024-07-17</span>
+							<span class="transaction-description">Received $100.00</span>
+						</li>
+						<li>
+							<span class="transaction-date">2024-07-16</span>
+							<span class="transaction-description">Sent $50.00</span>
+						</li>
+						<!-- More transaction entries -->
+					</ul>
+				</div>
+				<div class="withdrawal">
+					<button class="withdraw-button">Withdraw Funds</button>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['email'])) {
+    header("Location: ../sign_in.html");
+    exit();
+}
+
+// Database connection
+$db_host = 'localhost';
+$db_name = 'ishield';
+$db_user = 'root';
+$db_pass = '';
+
+$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$email = $_SESSION['email'];
+
+// Query to fetch KYC information
+$sql = "
+    SELECT firstName, lastName, gender, address1, address2, city, state, countryOfResidence, zip, mobile, email, dateOfBirth, idType, idNumber, idFront, idBack 
+    FROM user_kyc 
+    WHERE email = ?
+";
+
+$stmt = $conn->prepare($sql);
+if (!$stmt) {
+    die("Prepare statement failed: " . $conn->error);
+}
+
+$stmt->bind_param('s', $email);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows == 1) {
+    $row = $result->fetch_assoc();
+    $firstName = htmlspecialchars($row['firstName']);
+    $lastName = htmlspecialchars($row['lastName']);
+    $gender = htmlspecialchars($row['gender']);
+    $address1 = htmlspecialchars($row['address1']);
+    $address2 = htmlspecialchars($row['address2']);
+    $city = htmlspecialchars($row['city']);
+    $state = htmlspecialchars($row['state']);
+    $countryOfResidence = htmlspecialchars($row['countryOfResidence']);
+    $zip = htmlspecialchars($row['zip']);
+    $mobile = htmlspecialchars($row['mobile']);
+    $email = htmlspecialchars($row['email']);
+    $dateOfBirth = htmlspecialchars($row['dateOfBirth']);
+    $idType = htmlspecialchars($row['idType']);
+    $idNumber = htmlspecialchars($row['idNumber']);
+    $idFront = htmlspecialchars($row['idFront']);
+    $idBack = htmlspecialchars($row['idBack']);
+    $kycAvailable = true;
+} else {
+    $kycAvailable = false;
+}
+$stmt->close();
+$conn->close();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>View KYC</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .kyc-info, .kyc-prompt {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .kyc-info h2, .kyc-prompt h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .kyc-info p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .kyc-info p strong {
+            color: #000;
+        }
+
+        .kyc-info img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .kyc-prompt a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .kyc-prompt a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <section id="sidebar">
+        <a href="index.html" class="brand">
+            <img src="../images/logo-ishield.png" alt="Ishield">
+        </a>
+        <ul class="side-menu top">
+            <li>
+                <a href="index.html">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="profile.php">
+                    <i class='bx bx-user'></i>
+                    <span class="text">My Profile</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="kyc1.php">
+                    <i class='bx bxs-id-card'></i>
+                    <span class="text">KYC</span>
+                </a>
+            </li>
+            <li>
+                <a href="wallet.html">
+                    <i class='bx bx-wallet'></i>
+                    <span class="text">Wallet</span>
+                </a>
+            </li>
+            <li>
+                <a href="Analytics.html">
+                    <i class='bx bxs-doughnut-chart' ></i>
+                    <span class="text">Analytics</span>
+                </a>
+            </li>
+            <li >
+                <a href="team.html">
+                    <i class='bx bxs-group' ></i>
+                    <span class="text">Team</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog'></i>
+                    <span class="text">Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="logout.php" class="logout">
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="content">
+        <nav>
+            <i class='bx bx-menu'></i>
+            <div class="nav-right">
+                <input type="checkbox" id="switch-mode" hidden>
+                <label for="switch-mode" class="switch-mode"></label>
+                <a href="#" class="profile">
+                    <img src="<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Profile">
+                </a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>View KYC</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><i class='bx bx-chevron-right'></i></li>
+                        <li><a class="active" href="kyc1.php">KYC</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container">
+                <?php if ($kycAvailable): ?>
+                <div class="kyc-info">
+                    <h2>KYC Information</h2>
+                    <p><strong>First Name:</strong> <?php echo $firstName; ?></p>
+                    <p><strong>Last Name:</strong> <?php echo $lastName; ?></p>
+                    <p><strong>Gender:</strong> <?php echo $gender; ?></p>
+                    <p><strong>Address Line 1:</strong> <?php echo $address1; ?></p>
+                    <p><strong>Address Line 2:</strong> <?php echo $address2; ?></p>
+                    <p><strong>City:</strong> <?php echo $city; ?></p>
+                    <p><strong>State:</strong> <?php echo $state; ?></p>
+                    <p><strong>Country of Residence:</strong> <?php echo $countryOfResidence; ?></p>
+                    <p><strong>Zip/Postal Code:</strong> <?php echo $zip; ?></p>
+                    <p><strong>Mobile:</strong> <?php echo $mobile; ?></p>
+                    <p><strong>Email:</strong> <?php echo $email; ?></p>
+                    <p><strong>Date Of Birth:</strong> <?php echo $dateOfBirth; ?></p>
+                    <p><strong>ID Type:</strong> <?php echo $idType; ?></p>
+                    <p><strong>ID Number:</strong> <?php echo $idNumber; ?></p>
+                    <p><strong>ID Front:</strong></p>
+                    <img src="<?php echo $idFront; ?>" alt="ID Front">
+                    <p><strong>ID Back:</strong></p>
+                    <img src="<?php echo $idBack; ?>" alt="ID Back">
+                </div>
+                <?php else: ?>
+                <div class="kyc-prompt">
+                    <h2>KYC Information Not Found</h2>
+                    <p>Please submit your KYC information to view your details.</p>
+                    <a href="submit_kyc.php">Submit KYC</a>
+                </div>
+                <?php endif; ?>
+            </div>
+        </main>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
